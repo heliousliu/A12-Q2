@@ -1,0 +1,88 @@
+/**************************************
+LAYOUT CSS
+**************************************/
+
+.wrapper {
+  max-width: 900px;
+  margin: 50px auto;
+}
+
+/**************************************
+CSS TO MAKE THE EXAMPLE LOOK PRETTY
+**************************************/
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.one, .two, .three, .four, .five, .six, .seven {
+  background-color: #163A59;
+  color: #FF6600;
+  border: 2px solid;
+  box-sizing: border-box;
+  min-height: 100px;
+  line-height: 100px;
+}
+
+/*add new code start---*/
+@media screen and (min-width:576px){
+  .wrapper {
+     display: grid;
+  }
+
+  .one, .four, .seven {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media screen and (min-width:900px){
+   .wrapper {
+     display: grid;
+  }
+  .one {
+    grid-column-start: 0;
+    grid-column-end: 1;
+  }
+  .two {
+    grid-column-start: 2;
+    grid-column-end: 5;
+  }
+  .three {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .four {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+  
+  .five {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .six {
+    grid-column-start: 4;
+    grid-column-end: 5;
+  }
+  
+  .seven{
+     grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  
+}
+
+
